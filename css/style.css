@@ -85,7 +85,13 @@ body {
 	-webkit-transform: rotateY(180deg);
 	opacity: 0;
 }
-h2 {
+h1 { font-size: 3em; line-height:1.2em; margin:0 0 .3em; }
+h2 { font-size: 1.8em; line-height:1.4em; margin:0 0 .3em;  }
+h3 { font-size: 1.4em; line-height:1.4em; }
+h4 { font-size: 1.25em; line-height:1.4em;}
+h5 { font-size: 1.1em; line-height:1.4em; }
+h6 { font-size: 1em; line-height:1.2em; }
+/* h2 {
 	font-size: 32px;
 	font-weight: 600;
 	margin-bottom: 15px;
@@ -96,7 +102,7 @@ h4 {
 	color: #00baff;
 	letter-spacing: 1px;
 	margin-bottom: 25px
-}
+} */
 p {
 	font-size: 16px;
 	line-height: 26px;
