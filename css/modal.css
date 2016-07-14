@@ -18,7 +18,7 @@
 }
 .modalDialog .modal-wrapper {
 	width: 400px;
-	min-width: 320px;
+	min-width: 300px;
 	position: relative;
 	margin: 10% auto;
 	padding: 65px 20px 13px 20px;
@@ -128,4 +128,74 @@
 }
 .contact-list a {
 	color: #303f9f; 
+}
+
+/* ===============
+	MEDIA 
+   =============== */
+   
+@media screen and (max-width: 320px) {
+	.modalDialog .modal-wrapper {
+		width: 90%;
+		position: relative;
+		margin: 5% auto 0;
+	}
+	.avatar-flip {
+		height: 100px;
+		width: 100px;
+		position: relative;
+		margin: auto;
+		top: -60px;
+	}
+	.avatar-flip img {
+		width: 100px;
+		height: 100px;
+		border-radius: 50%;
+	}
+	.modal-body-box h3 {
+		margin: 0 auto 10px;
+		font-size: 20px;
+	}
+	.contact-list p {		
+		padding: 0 0 .3rem;
+		font-size: 1.4rem;
+	}
+	.contact-list span {
+		padding: 0 1.5rem;
+		font-size: 2rem;
+	}
+}
+@media screen and (max-width: 480px) {
+	.modalDialog .modal-wrapper {
+		width: 80%;
+	}
+	.avatar-flip {
+		height: 150px;
+		width: 150px;
+	}
+	.avatar-flip img {
+		width: 150px;
+		height: 150px;
+	}
+	.modal-body-box h3 {
+		margin: 0 auto 20px;
+		font-size: 22px;
+	}
+	.contact-list p {		
+		padding: 0 0 .3rem;
+		font-size: 1.4rem;
+	}
+	.contact-list span {
+		padding: 0 1.5rem;
+		font-size: 2rem;
+	}
+}
+@media screen and (max-width: 768px) {
+  
+}   
+@media screen and (max-width: 992px) {
+  
+}
+@media screen and (max-width: 1200px) {
+  
 }

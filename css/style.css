@@ -22,7 +22,7 @@ html {
 body {
 	min-height: 100%;
 	background-color: #f0f0f0;
-	font: 300 1.6em/1.5 'Open Sans', Roboto, sans-serif;
+	font: 300 1.4em/1.5 'Open Sans', Roboto, sans-serif;
 	color: #333;
 }
 div {
@@ -87,29 +87,7 @@ a:hover, a:active, a:focus {
 .text-left {text-align: left;}
 .text-right {text-align: right;}
 
-/* ===============
-	MEDIA 
-   =============== */
-   
-@media screen and (max-width: 320px) {
-  figure figcaption {
-    width: 100%;
-  }
-}
-@media screen and (max-width: 480px) {
-  figure figcaption {
-    width: 100%;
-  }
-}
-@media screen and (max-width: 768px) {
-  
-}   
-@media screen and (max-width: 992px) {
-  
-}
-@media screen and (max-width: 1200px) {
-  
-}
+
 
 /* ===============
 	HEADER 
@@ -324,4 +302,31 @@ p {
 	word-wrap: break-word;
 }
 
-
+/* ===============
+	MEDIA 
+   =============== */
+   
+@media screen and (max-width: 320px) {
+	#rcr-logo {
+		float: left;
+		margin: 10px 0 0 5%;
+	}
+	#rcr-logo > a > img {
+		width: 150px;
+		border: 0;
+	}
+}
+@media screen and (max-width: 480px) {
+  figure figcaption {
+    width: 100%;
+  }
+}
+@media screen and (max-width: 768px) {
+  
+}   
+@media screen and (max-width: 992px) {
+  
+}
+@media screen and (max-width: 1200px) {
+  
+}
