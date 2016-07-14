@@ -317,9 +317,7 @@ p {
 	}
 }
 @media screen and (max-width: 480px) {
-  figure figcaption {
-    width: 100%;
-  }
+  
 }
 @media screen and (max-width: 768px) {
   
