@@ -129,7 +129,31 @@
 .contact-list a {
 	color: #303f9f; 
 }
-
+.social-link {
+	border-top: 1px solid #777;
+}
+.social-link ul {
+	padding: 0;
+    margin: 20px 0 0 0;
+    position: relative;
+}
+.social-link li {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    display: inline;
+}
+.social-link li a {
+    font-size: 40px;
+    padding: 4px;
+    color: #303f9f;
+    -webkit-transition: 0.5s;
+    -o-transition: 0.5s;
+    transition: 0.5s;
+}
+.social-link li a:hover {    
+    color: #ff5000;
+}
 /* ===============
 	MEDIA 
    =============== */
@@ -191,7 +215,9 @@
 	}
 }
 @media screen and (max-width: 768px) {
-  
+	.social-link li a {
+		font-size: 26px;
+	}
 }   
 @media screen and (max-width: 992px) {
   
