@@ -52,26 +52,19 @@
 	
 	.accordian {
 		display: block;
-		float: left;
-		margin-right: 40px;
-		margin-bottom: 40px;
+		margin: 0 auto;
 		padding: 0;
-		width: 805px; 
+		max-width: 805px; 
 		height: 480px;
 		overflow: hidden;
-		
-		/*Time for some styling*/
 		box-shadow: 0 0 10px 1px rgba(0, 0, 0, 0.35);
 		-webkit-box-shadow: 0 0 10px 1px rgba(0, 0, 0, 0.35);
 		-moz-box-shadow: 0 0 10px 1px rgba(0, 0, 0, 0.35);
 }
 
-	/*A small hack to prevent flickering on some browsers*/
 	.accordian ul {
 		padding: 0;
 		width: 100%;
-		/*This will give ample space to the last item to move
-		instead of falling down/flickering during hovers.*/
 	}
 
 	.accordian li {
@@ -80,24 +73,18 @@
 		position: relative;
 		display: block;
 		width: 160px;
-		float: left;		
-		/* border-left: 1px solid #888; */		
+		float: left;	
 		box-shadow: 0 0 25px 10px rgba(0, 0, 0, 0.5);
 		-webkit-box-shadow: 0 0 25px 10px rgba(0, 0, 0, 0.5);
 		-moz-box-shadow: 0 0 25px 10px rgba(0, 0, 0, 0.5);
 		
-		/*Transitions to give animation effect*/
 		transition: all 0.5s;
 		-webkit-transition: all 0.5s;
 		-moz-transition: all 0.5s;
-		/*If you hover on the images now you should be able to 
-		see the basic accordian*/
 	}
 
-	/*Reduce with of un-hovered elements*/
+	
 	.accordian ul:hover li {width: 40px;}
-	/*Lets apply hover effects now*/
-	/*The LI hover style should override the UL hover style*/
 	.accordian ul li:hover {width: 640px;}
 
 
@@ -124,40 +111,11 @@
 		border-bottom: 0;
 	}
 	
-	@media only screen
-	and (min-device-width : 320px)
-	and (max-device-width : 480px) {
+	@media screen and (max-width: 768px) {
 		.descript {
-			margin: 10px;		
+			margin: 10% auto;		
 		}
-		.accordian {		
-			margin-right: 0;
-			margin-bottom: 10px;
-			width: 300px;
-			height: 165px;
-		}
-		.accordian li {
-			width: 60px;
-		}
-		.accordian li img {
-			display: block;
-			max-width: 220px;
-		}
-		.image_title {width: 220px;}
-		.accordian ul:hover li {width: 20px;}
-		.accordian ul li:hover {width: 220px;}
-	}
-
-	@media only screen
-	and (min-device-width : 320px)
-	and (max-device-width : 480px) 
-	and (orientation: landscape) {
-		.descript {
-			margin: 5px;		
-		}
-		.accordian {		
-			margin-right: 0;
-			margin-bottom: 10px;
+		.accordian {
 			width: 460px;
 			height: 285px;
 		}
@@ -173,73 +131,7 @@
 		.accordian ul li:hover {width: 380px;}
 	}
 	
-	@media only screen
-	and (min-device-width: 768px)
-	and (max-device-width: 1024px)
-	and (orientation : portrait)	{ 
-		.descript {
-			margin: 30px;		
-		}
-		.accordian {		
-			margin-right: 0;
-			margin-bottom: 40px;
-			width: 708px;
-			height: 411px;
-		}
-		.accordian li {
-			width: 141px;
-		}
-		.accordian li img {
-			display: block;
-			max-width: 548px;
-		}
-		.image_title {width:548px;}
-		.accordian ul:hover li {width: 40px;}
-		.accordian ul li:hover {width: 548px;}
-	}
-	
-	@media only screen
-	and (min-device-width: 768px)
-	and (max-device-width: 1024px)
-	and (orientation: landscape) {
-		.descript {
-			margin: 109px;		
-		}
-		.accordian {		
-			margin-right: 0;
-			margin-bottom: 40px;
-			width: 805px;
-			height: 480px;
-		}
-		.accordian li {
-			width: 161px;
-		}
-		.accordian li img {
-			display: block;
-			max-width: 640px;
-		}
-		.image_title {width:640px;}
-		.accordian ul:hover li {width: 40px;}
-		.accordian ul li:hover {width: 640px;}
-	}
-	@media only screen
-	and (min-device-width : 980px)
-	and (max-device-width : 1280px)
-	and (orientation : portrait)	{
-		.descript {
-			margin: 100px 136px 50px;		
-		}
-	}
-	
-	@media only screen
-	and (min-device-width : 980px)
-	and (max-device-width : 1280px)
-	and (orientation : landscape)	{
-		.descript {
-			margin: 100px 50px 50px;		
-		}
-	}
-	
+		
 /* Box Model */
 
 	*, *:before, *:after {
