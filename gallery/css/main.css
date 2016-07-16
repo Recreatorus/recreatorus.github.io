@@ -1174,12 +1174,12 @@
 		border-bottom: 0;
 	}
 	
-	@media screen and (max-width: 480px) {
+	@media screen and (max-width: 730px) {
 		.accordian {
 			display: none;
 		}	
 	}
-	@media screen and (max-width: 736px) {
+	@media screen and (max-width: 1024px) {
 		.descript {
 			margin: 10% auto;		
 		}
@@ -1301,7 +1301,7 @@ slideshow
 	z-index: 3;
 }
 
-@media screen and (min-width: 481px) {
+@media screen and (min-width: 736px) {
 	
 	.slideshow {
 		display: none;
