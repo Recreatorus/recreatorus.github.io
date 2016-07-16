@@ -50,6 +50,21 @@
 		margin: 100px;		
 	}
 	
+	.logo {
+		margin: 10px auto;
+		text-align: center;
+	}
+	
+	.logo a {
+		text-decoration: none;
+		outline: none;
+		border: 0;
+	}
+	
+	.logo > a > img {
+		max-width: 300px;
+		border: 0;
+	}
 	.accordian {
 		display: block;
 		margin: 0 auto;
