@@ -1082,7 +1082,11 @@
 					-ms-transform: translateY(0);
 					transform: translateY(0);
 				}
-
+			
+				.logo > a > img {
+					max-width: 200px;
+					border: 0;
+				}
 		}
 		
 /* gallery */
@@ -1175,7 +1179,7 @@
 			display: none;
 		}	
 	}
-	@media screen and (max-width: 768px) {
+	@media screen and (max-width: 736px) {
 		.descript {
 			margin: 10% auto;		
 		}
@@ -1193,6 +1197,10 @@
 		.image_title {width: 380px;}
 		.accordian ul:hover li {width: 20px;}
 		.accordian ul li:hover {width: 380px;}
+		.logo > a > img {
+			max-width: 200px;
+			border: 0;
+		}
 	}
 
 /* -------------------------------- 
@@ -1204,7 +1212,7 @@ slideshow
 .slideshow {
 	position: relative;
 	margin: auto;
-	width: 400px;
+	width: 90%;
 }
 #slides {
 	position: relative;
@@ -1294,6 +1302,7 @@ slideshow
 }
 
 @media screen and (min-width: 481px) {
+	
 	.slideshow {
 		display: none;
 	}
