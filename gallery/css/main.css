@@ -1090,11 +1090,11 @@
 	.descript {
 		display: block;
 		position: relative;
-		margin: 100px;		
+		margin: 5% auto;		
 	}
 	
 	.logo {
-		margin: 10px auto;
+		margin: 1rem 0 2rem;
 		text-align: center;
 	}
 	
@@ -1170,6 +1170,11 @@
 		border-bottom: 0;
 	}
 	
+	@media screen and (max-width: 480px) {
+		.accordian {
+			display: none;
+		}	
+	}
 	@media screen and (max-width: 768px) {
 		.descript {
 			margin: 10% auto;		
@@ -1190,6 +1195,109 @@
 		.accordian ul li:hover {width: 380px;}
 	}
 
+/* -------------------------------- 
+
+slideshow
+
+-------------------------------- */
+
+.slideshow {
+	position: relative;
+	margin: auto;
+	width: 400px;
+}
+#slides {
+	position: relative;
+	/* height: 150px; */
+	padding: 0px;
+	margin: 0px;
+	list-style-type: none;
+}
+
+.slide {
+	position: absolute;
+	left: 0px;
+	top: 0px;
+	width: 100%;
+	height: 100%;
+	opacity: 0;
+	/* z-index: 1; */
+	-webkit-transition: opacity 1s;
+	-moz-transition: opacity 1s;
+	-o-transition: opacity 1s;
+	transition: opacity 1s;
+}
+
+.showing {
+	opacity: 1;
+	/* z-index: 2; */
+}
+.slide {	
+	box-sizing: border-box;
+	background: #333;
+}
+.slide figure {
+    position: absolute;
+	top: 0;
+	left: 0;
+    display: block;
+	margin: 0;
+    padding: 0;
+    border: 0;    
+    vertical-align: baseline;
+    overflow: hidden;
+	/* z-index: 1; */
+}
+.slide figure img {
+    border: 0px none;
+    width: 100%;
+	max-width: 100%;	
+    vertical-align: top;
+}
+.slide figure figcaption {
+    position: absolute;
+	bottom: 0px;
+	left: 0;
+    width: 100%;
+    height: 100px;
+	margin: 0;
+    padding: 5px 15px;
+	background: -webkit-linear-gradient(top, transparent 0%, rgba(0, 0, 0, .7) 100%);
+	background: linear-gradient(to bottom, transparent 0%, rgba(0, 0, 0, .7) 100%);
+    color: #fff;
+	text-align: left;
+}
+
+.slide figure figcaption h2 {
+    margin: 0.5rem 0 0;
+    border-bottom: 1px dotted #ddd;
+    font-size: 20px;
+    font-weight: 700;
+    line-height: 1.5;
+    letter-spacing: -1px;
+}
+.slide figure figcaption p {	
+	font-size: 16px;
+	margin: 0;
+}
+.slide figure figcaption a {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    text-indent: 200%;
+    white-space: nowrap;
+    font-size: 0;
+    opacity: 0;
+	z-index: 3;
+}
+
+@media screen and (min-width: 481px) {
+	.slideshow {
+		display: none;
+	}
+}
 /* Poptrox Popup */
 
 	.poptrox-overlay {

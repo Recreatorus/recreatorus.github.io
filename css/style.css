@@ -395,7 +395,8 @@ body.loading #wrapper:before {
 		color: #f0eee1;
 		border-top: none;
 		text-decoration: none;
-		letter-spacing: .1rem;
+		letter-spacing: 1px;
+		font-family: 'Open Sans Condensed';
 		font-size: 1.8rem;
 		text-transform: uppercase;
 		font-weight: 300;
