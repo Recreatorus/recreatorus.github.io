@@ -433,6 +433,9 @@ p {
 		height: calc(25% - 4rem);
 		padding: 1rem;
 	}
+	.present_item h3 {
+		margin: 0 auto;
+	}
 	.present_item p {
 		display: none;
 	}
