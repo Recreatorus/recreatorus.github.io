@@ -29,13 +29,11 @@
 		
 	<!-- styles -->
 	<link href="css/reset.css" rel="stylesheet">
+	<link href="css/fonts.css" rel="stylesheet">
 	<link href="fonts/icon-7-stroke/css/pe-icon-7-stroke.css" rel="stylesheet">
 	<link href="css/font-awesome.min.css" rel="stylesheet">
 	<link href="css/modal.css" rel="stylesheet">
 	<link href="css/style.css" rel="stylesheet">
-	<!-- <link href="http://fonts.googleapis.com/css?family=PT+Sans+Narrow&amp;subset=cyrillic,latin" rel="stylesheet">
-	<link href="http://fonts.googleapis.com/css?family=Roboto+Condensed:400,300,300italic,400italic,700,700italic&subset=latin,cyrillic" rel="stylesheet"> -->
-	<link href='https://fonts.googleapis.com/css?family=Open+Sans:100,300,300italic,400,400italic,700,700italic|Open+Sans+Condensed:300,300italic,700&subset=latin,cyrillic' rel='stylesheet' type='text/css'>
 	<!-- Script -->
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
 	<script src="js/modernizr.js"></script>
@@ -56,7 +54,7 @@
 </head>
 
 <body>
-	<div id="wrapper">
+	
 		<header class="rcr-header">
 			<div id="rcr-logo">
 				<a href="https://recreatorus.github.io"><img src="img/logo.png" alt="Recreatorus logo"></a>
@@ -72,7 +70,9 @@
 	
 		<div id="openModal" class="modalDialog">
 			<div class="modal-wrapper">
-				<a href="#close" title="Close" class="close">X</a>
+				<div  class="close">	
+					<a href="#" title="Close"><img src="img/close.svg" alt="close"></a>
+				</div>
 				<div class="modal-body-box">
 					<div class="avatar-flip">
 						<img src="img/avatar-1.jpg" alt="avatar">
@@ -100,10 +100,26 @@
 	
 		<section class="rcr_top" id="">
 			<div class="overlay">
-			
+				<div class="present">
+					<div class="present_item" data-delay="500">
+						<h2>Веб-дизайн</h2>
+						<p>разработка PSD-макетов сайтов, дизайна Landing Page (одностраничных сайтов)</p>
+					</div>
+					<div class="present_item" data-delay="1500">
+						<h2>Создание сайтов</h2>
+						<p>адаптивная и кроссбраузерная верстка (HTML, CSS, JS, JQuery)</p>
+					</div>
+					<div class="present_item" data-delay="3000">
+						<h2>Обработка изображений</h2>
+						<p>восстановление/реставрация старых фотографий</p>
+					</div>
+					<div class="present_item" data-delay="4500">
+						<h2>Портретная ретушь</h2>
+						<p>устранение основных деффектов с сохранением естественности и натуральности фактуры</p>
+					</div>				
+				</div>
 			</div>
 		</section>
-	</div> <!-- ./wrapper -->
 	
 	<script src="js/main.js"></script>
 	

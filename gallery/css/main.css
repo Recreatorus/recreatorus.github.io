@@ -1279,10 +1279,10 @@ slideshow
 .slide figure figcaption h2 {
     margin: 0.5rem 0 0;
     border-bottom: 1px dotted #ddd;
-    font-size: 20px;
-    font-weight: 700;
+    font-size: 18px;
+    font-weight: 400;
     line-height: 1.5;
-    letter-spacing: -1px;
+    letter-spacing: .1rem;
 }
 .slide figure figcaption p {	
 	font-size: 16px;

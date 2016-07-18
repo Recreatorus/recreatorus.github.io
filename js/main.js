@@ -18,3 +18,13 @@ jQuery(function($){
 });
 
 
+jQuery(function($){
+	$.fn.fadeInDelay = function(){
+    	var init = function(){
+        	$(this).hide().delay($(this).data('delay')).fadeIn();
+        };
+    	return this.each(init);
+    };
+}(jQuery));
+
+$('.present_item').fadeInDelay();

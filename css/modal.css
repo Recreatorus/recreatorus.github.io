@@ -4,7 +4,7 @@
 	right: 0;
 	bottom: 0;
 	left: 0;
-	background: rgba(0,0,0,.75);
+	background-color: rgba(0,0,0,.75);
 	z-index: 999;
 	opacity:0;
 	-webkit-transition: opacity 400ms ease-in;
@@ -25,22 +25,17 @@
 }
 .close {	
 	position: absolute;
-	right: 2px;
-	top: 65px;
-	width: 24px;
-	background: #303f9f;
-	text-align: center;	
-	color: #fff;
-	line-height: 25px;
-	text-decoration: none;
-	font-weight: bold;
-	-webkit-border-radius: 12px;
-	-moz-border-radius: 12px;
-	border-radius: 12px;
-}
-.close:hover { 
-	background: #ff5000;
-	color: #fff;
+    right: 2px;
+    top: 35px;
+    width: 30px;
+	height: 30px;
+    background-color: transparent;
+    text-align: center;
+    line-height: 30px;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    border-radius: 50%;
+    
 }
 .modal-body-box {
 	position: relative;
