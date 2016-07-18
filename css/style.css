@@ -442,6 +442,7 @@ p {
 	}
 	.present_item h3 {
 		margin: 0 auto;
+		font-weight: 300;
 	}
 	.present_item p {
 		display: none;
