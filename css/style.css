@@ -384,8 +384,11 @@ p {
 }
 
 .present_item {
+	display: -webkit-box;
+	display: -webkit-flex;
+	display: -ms-flexbox;
 	display: flex;
-	flex-flow: row wrap;
+	flex-flow: column wrap;
 	justify-content: center;
 	align-items: center;
 	align-content: center;
@@ -428,9 +431,13 @@ p {
 	
 }
 @media screen and (max-width: 768px) {
+	.present {
+		padding: 60px 0 0;
+	}
 	.present_item {
 		width: calc(100% - 2rem);
-		height: calc(25% - 4rem);
+		height: calc(25% - 2rem);
+		margin: .5rem;
 		padding: 1rem;
 	}
 	.present_item h3 {
