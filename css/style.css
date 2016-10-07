@@ -7,10 +7,10 @@
 }
 
 body, html {
-    position: relative;
-	width: 100%;
-    margin: 0;
-    padding: 0;
+  position: relative;
+  width: 100%;
+  margin: 0;
+  padding: 0;
 }
 
 html {
@@ -124,15 +124,10 @@ h6 {font-size: 0.8rem;}
 
 	h1, h2, h3, h4, h5, h6 { margin-bottom: 1rem;}
 	h2 {font-size: 2rem;}
-
 	h3 {font-size: 1.5rem;}
-
 	h4 {font-size: 1rem;}
-
 	h5 {font-size: 0.9rem;}
-
 	h6 {font-size: 0.7rem;}
-
 }
 
 p {
@@ -182,7 +177,7 @@ hr {
 }
 
 /* ===============
-	HEADER 
+    HEADER 
    =============== */
 
 .rcr-header {
@@ -220,7 +215,7 @@ hr {
 }
 
 /* ===============
-	NAVIGATION 
+    NAVIGATION 
    =============== */
 
 .rcr-primary-nav {
@@ -252,6 +247,8 @@ hr {
 	transform: translateY(-100%);
 }
 .rcr-primary-nav ul.is-visible {
+	padding: 30px 0 60px;
+	background: rgba(0,0,0,.75);
 	-webkit-transform: translateY(50px);
 	-moz-transform: translateY(50px);
 	-ms-transform: translateY(50px);
@@ -259,15 +256,100 @@ hr {
 	transform: translateY(50px);	
 }
 
-.rcr-primary-nav a {
+.rcr-primary-nav ul.is-visible > li > a {
 	display: block;
 	height: 50px;
-	line-height: 50px;
-	padding-left: 5%;
-	background: rgba(0,0,0,.75);
-	border-top: 1px dotted #1b1a1a;
+	width: 80%;
+    margin-left: 10%;	
+	border-bottom: 1px dotted rgba(255,255,255,0.3);
 	color: #fff;
+	font: 1.5rem/50px "Open Sans Condensed";
+	letter-spacing: 0.2em;
+	text-transform: uppercase;
+	-webkit-transition: all 0.5s;
+    -moz-transition: all 0.5s;
+    -o-transition: all 0.5s;
+    transition: all 0.5s;
 }
+/* mobile-menu animation */
+.rcr-primary-nav ul.is-visible > li > a {	
+	-webkit-animation-duration: 0.8s;
+	animation-duration: 0.8s;
+	-webkit-animation-fill-mode: both;
+	animation-fill-mode: both;
+	-webkit-animation-name: bounceInLeft;
+	animation-name: bounceInLeft;
+}
+
+	
+@-webkit-keyframes bounceInLeft {
+  from, 60%, 75%, 90%, to {
+    -webkit-animation-timing-function: cubic-bezier(0.215, 0.610, 0.355, 1.000);
+    animation-timing-function: cubic-bezier(0.215, 0.610, 0.355, 1.000);
+  }
+
+  from {
+    opacity: 0;
+    -webkit-transform: translate3d(-3000px, 0, 0);
+    transform: translate3d(-3000px, 0, 0);
+  }
+
+  60% {
+    opacity: 1;
+    -webkit-transform: translate3d(25px, 0, 0);
+    transform: translate3d(25px, 0, 0);
+  }
+
+  75% {
+    -webkit-transform: translate3d(-10px, 0, 0);
+    transform: translate3d(-10px, 0, 0);
+  }
+
+  90% {
+    -webkit-transform: translate3d(5px, 0, 0);
+    transform: translate3d(5px, 0, 0);
+  }
+
+  to {
+    -webkit-transform: none;
+    transform: none;
+  }
+}
+
+@keyframes bounceInLeft {
+  from, 60%, 75%, 90%, to {
+    -webkit-animation-timing-function: cubic-bezier(0.215, 0.610, 0.355, 1.000);
+    animation-timing-function: cubic-bezier(0.215, 0.610, 0.355, 1.000);
+  }
+
+  from {
+    opacity: 0;
+    -webkit-transform: translate3d(-3000px, 0, 0);
+    transform: translate3d(-3000px, 0, 0);
+  }
+
+  60% {
+    opacity: 1;
+    -webkit-transform: translate3d(25px, 0, 0);
+    transform: translate3d(25px, 0, 0);
+  }
+
+  75% {
+    -webkit-transform: translate3d(-10px, 0, 0);
+    transform: translate3d(-10px, 0, 0);
+  }
+
+  90% {
+    -webkit-transform: translate3d(5px, 0, 0);
+    transform: translate3d(5px, 0, 0);
+  }
+
+  to {
+    -webkit-transform: none;
+    transform: none;
+  }
+}
+
 @media only screen and (min-width: 768px) {
 	.rcr-primary-nav {
 		width: auto;
@@ -350,7 +432,7 @@ hr {
 
 
 /* ===============
-	SECTION RCR_TOP 
+    SECTION RCR_TOP 
    =============== */
 
 .rcr_top {
@@ -430,22 +512,8 @@ hr {
 	color: #f0eee1;
 }
 /* ===============
-	MEDIA 
+    MEDIA 
    =============== */
-   
-@media screen and (max-width: 320px) {
-	#rcr-logo {
-		float: left;
-		margin: 10px 0 0 5%;
-	}
-	#rcr-logo > a > img {
-		width: 150px;
-		border: 0;
-	}
-}
-@media screen and (max-width: 480px) {
-	
-}
 @media screen and (max-width: 768px) {
 	.present {
 		padding: 60px 0 0;
@@ -463,10 +531,17 @@ hr {
 	.present_item p {
 		display: none;
 	}
-}   
-@media screen and (max-width: 992px) {
-  
 }
-@media screen and (max-width: 1200px) {
-  
+@media screen and (max-width: 480px) {
+	
+}
+@media screen and (max-width: 320px) {
+	#rcr-logo {
+		float: left;
+		margin: 10px 0 0 5%;
+	}
+	#rcr-logo > a > img {
+		width: 150px;
+		border: 0;
+	}
 }
