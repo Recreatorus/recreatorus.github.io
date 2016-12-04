@@ -1,13 +1,13 @@
-// Mobile menu 
+// Mobile menu
 $('.rcr-primary-nav').click(function () {
 	$(this).children('ul').toggleClass('is-visible');
 	$(this).toggleClass('open-mobile');
 });
-// Mobile menu animation 
+// Mobile menu animation
 $(".rcr-primary-nav a").each(function( index ) {
   	$( this ).css({'animation-delay': (index/10)+'s'});
-});	
-// Click outside of mobile menu 
+});
+// Click outside of mobile menu
 jQuery(function($){
 	$(document).mouseup(function (e){
 		var div = $('.rcr-primary-nav');
