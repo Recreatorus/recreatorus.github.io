@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="1442px" height="3506px" viewBox="0 0 1442 3506" version="1.1" xmlns="http://www.w3.org/2000/svg"
+  xmlns:xlink="http://www.w3.org/1999/xlink">
+  <title>background dark</title>
+  <defs>
+    <rect id="path-1" x="0" y="0" width="1440" height="3504"></rect>
+    <radialGradient cx="50%" cy="50%" fx="50%" fy="50%" r="50%" id="radialGradient-3">
+      <stop stop-color="#C03E00" offset="0%"></stop>
+      <stop stop-color="#C03E00" stop-opacity="0" offset="100%"></stop>
+    </radialGradient>
+    <radialGradient cx="50%" cy="50%" fx="50%" fy="50%" r="50%" id="radialGradient-4">
+      <stop stop-color="#C9EFFF" offset="0%"></stop>
+      <stop stop-color="#C9EFFF" stop-opacity="0" offset="100%"></stop>
+    </radialGradient>
+  </defs>
+  <g id="Creed-culture-codex---v2" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+    <g id="Creed-culture-codex" transform="translate(1.000000, -3066.000000)">
+      <g id="01-Who" transform="translate(0.000000, 2023.000000)">
+        <g id="background-dark" transform="translate(0.000000, 1044.000000)">
+          <mask id="mask-2" fill="white">
+            <use xlink:href="#path-1"></use>
+          </mask>
+          <use id="Rectangle" fill="#ffffff" xlink:href="#path-1"></use>
+          <circle id="Oval-Copy-7" fill="url(#radialGradient-3)" opacity="0.469559152" mask="url(#mask-2)" cx="559.5" cy="3747.5" r="908.5">
+          </circle>
+          <circle id="Oval" fill="url(#radialGradient-4)" opacity="0.198003" mask="url(#mask-2)" cx="-89.5" cy="1766.5" r="685.5"></circle>
+          <circle id="Oval-Copy-7" fill="url(#radialGradient-3)" opacity="0.469559152" mask="url(#mask-2)" cx="1578.5" cy="723.5" r="908.5">
+          </circle>
+        </g>
+      </g>
+    </g>
+  </g>
+</svg>
