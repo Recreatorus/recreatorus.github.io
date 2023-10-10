@@ -1,1 +1,118 @@
-var{assign:a}=Object,i=document.querySelectorAll('.nav__item-text'),l=document.querySelector('.hero-title');async function b(){if(!this.createImageBitmap)return!1;return createImageBitmap(await fetch('data:image/avif;base64,AAAAIGZ0eXBhdmlmAAAAAGF2aWZtaWYxbWlhZk1BMUIAAADybWV0YQAAAAAAAAAoaGRscgAAAAAAAAAAcGljdAAAAAAAAAAAAAAAAGxpYmF2aWYAAAAADnBpdG0AAAAAAAEAAAAeaWxvYwAAAABEAAABAAEAAAABAAABGgAAAB0AAAAoaWluZgAAAAAAAQAAABppbmZlAgAAAAABAABhdjAxQ29sb3IAAAAAamlwcnAAAABLaXBjbwAAABRpc3BlAAAAAAAAAAIAAAACAAAAEHBpeGkAAAAAAwgICAAAAAxhdjFDgQ0MAAAAABNjb2xybmNseAACAAIAAYAAAAAXaXBtYQAAAAAAAAABAAEEAQKDBAAAACVtZGF0EgAKCBgANogQEAwgMg8f8D///8WfhwB8+ErK42A=').then(e=>e.blob())).then(()=>!0,()=>!1)}function c(e){((p.x=e.clientX),(p.y=e.clientY))}function d(){(r.x==p.x&&r.y==p.y)||((q.x=f(p.x,n.width)),(q.y=f(p.y,n.height)),(q.xCenter=f(p.x-o.x,o.x)),(q.yCenter=f(p.y-o.y,o.y)),l.style.setProperty('--fontWght',Math.abs(400*q.yCenter)+375),l.style.setProperty('--fontYOPQ',Math.abs(65*q.x)+20),l.style.setProperty('--fontYTAS',Math.abs(205*q.xCenter)+649),l.style.setProperty('--fontYTLC',Math.abs(80*q.y)+470),(r.x=p.x),(r.y=p.y))}function e(e,t,A){var r;return function(...args){var o=this,n=args,a=A&&!r;(clearTimeout(r),(r=setTimeout(function(){((r=null),A||e.apply(o,n))},t)),a&&e.apply(o,n))}}function f(e,t){return e/t}const g=document.getElementById('toggle'),h=document.getElementById('nav');g.addEventListener('click',()=>h.classList.toggle('active'));for(const e of i){function t(){history.replaceState('',document.title,window.location.origin+window.location.pathname)}e.addEventListener('click',()=>setTimeout(()=>t(),5))}(async ()=>{var e=await b()?'avif':'jpg';(await b()?console.log(`%cYour browser supports ${e}-image format`,'color: green;'):console.log('%cYour browser does not support AVIF-image format','color: darkred;'))})();var j=document.querySelectorAll('#ticker .ticker-item'),k=0;let m=window.matchMedia('(prefers-reduced-motion: no-preference)'),n={width:window.innerWidth,height:window.innerHeight},o={x:n.width/2,y:n.height/2},p={x:0,y:0},q={x:0,y:0,xCenter:0,yCenter:0},r=a({},p);m&&window.addEventListener('mousemove',e(function(e){(c(e),d())},5));const{}=aat,s=document.querySelector('.cards'),t=document.querySelectorAll('.card');(s.style.setProperty('--cards-count',t.length),s.style.setProperty('--card-height',`${t[0].clientHeight}px`));const u='./media/click.mp3',v=new Audio(u),w=document.querySelector('.audio-mode');(w.addEventListener('click',()=>(w.classList.toggle('audio-off'),w.classList.contains('audio-off')?(v.volume=0):(v.volume=1))));
+async function supportsAvif() {
+  if (!this.createImageBitmap) return !1;
+  const e =
+      'data:image/avif;base64,AAAAIGZ0eXBhdmlmAAAAAGF2aWZtaWYxbWlhZk1BMUIAAADybWV0YQAAAAAAAAAoaGRscgAAAAAAAAAAcGljdAAAAAAAAAAAAAAAAGxpYmF2aWYAAAAADnBpdG0AAAAAAAEAAAAeaWxvYwAAAABEAAABAAEAAAABAAABGgAAAB0AAAAoaWluZgAAAAAAAQAAABppbmZlAgAAAAABAABhdjAxQ29sb3IAAAAAamlwcnAAAABLaXBjbwAAABRpc3BlAAAAAAAAAAIAAAACAAAAEHBpeGkAAAAAAwgICAAAAAxhdjFDgQ0MAAAAABNjb2xybmNseAACAAIAAYAAAAAXaXBtYQAAAAAAAAABAAEEAQKDBAAAACVtZGF0EgAKCBgANogQEAwgMg8f8D///8WfhwB8+ErK42A=',
+    t = await fetch(e).then((e) => e.blob());
+  return createImageBitmap(t).then(
+    () => !0,
+    () => !1
+  );
+}
+function nextSlide() {
+  (slides[currentSlide].className = 'ticker-item'),
+    (currentSlide = (currentSlide + 1) % slides.length),
+    setTimeout(function () {
+      slides[currentSlide].classList.add('current');
+    }, 500);
+}
+function setMouseCoords(e) {
+  (mouse.x = e.clientX), (mouse.y = e.clientY);
+}
+function animateText() {
+  (mouseStored.x === mouse.x && mouseStored.y === mouse.y) ||
+    ((mousePercent.x = getPercentage(mouse.x, screen.width)),
+    (mousePercent.y = getPercentage(mouse.y, screen.height)),
+    (mousePercent.xCenter = getPercentage(mouse.x - center.x, center.x)),
+    (mousePercent.yCenter = getPercentage(mouse.y - center.y, center.y)),
+    varText.style.setProperty('--fontWght', Math.abs(400 * mousePercent.yCenter) + 375),
+    varText.style.setProperty('--fontYOPQ', Math.abs(65 * mousePercent.x) + 20),
+    varText.style.setProperty('--fontYTAS', Math.abs(205 * mousePercent.xCenter) + 649),
+    varText.style.setProperty('--fontYTLC', Math.abs(80 * mousePercent.y) + 470),
+    (mouseStored.x = mouse.x),
+    (mouseStored.y = mouse.y));
+}
+function debounce(e, t, A) {
+  var r;
+  return function () {
+    var o = this,
+      n = arguments,
+      c = function () {
+        (r = null), A || e.apply(o, n);
+      },
+      a = A && !r;
+    clearTimeout(r), (r = setTimeout(c, t)), a && e.apply(o, n);
+  };
+}
+function getPercentage(e, t) {
+  return e / t;
+}
+const toggle = document.getElementById('toggle'),
+  nav = document.getElementById('nav');
+toggle.addEventListener('click', () => nav.classList.toggle('active'));
+var menuLink = document.querySelectorAll('.nav__item-text');
+menuLink.forEach((e) => {
+  function t() {
+    history.replaceState('', document.title, window.location.origin + window.location.pathname);
+  }
+  e.addEventListener('click', () => {
+    setTimeout(() => {
+      t();
+    }, 5);
+  });
+});
+const images = document.querySelectorAll('.card img');
+(async () => {
+  const e = (await supportsAvif()) ? 'avif' : 'jpg';
+  (await supportsAvif())
+    ? console.log(`%cYour browser supports ${e}-image format`, 'color: green;')
+    : console.log('%cYour browser does not support AVIF-image format', 'color: darkred;'),
+    images.forEach((t) => {
+      (t.dataset.src = `${t.dataset.src}.${e}`), (t.src = `https://recreatorus.github.io/img/${t.dataset.src}`);
+    });
+})();
+var slides = document.querySelectorAll('#ticker .ticker-item'),
+  currentSlide = 0,
+  slideInterval = setInterval(nextSlide, 2500);
+const varText = document.querySelector('.hero-title');
+let isAnimationOk = window.matchMedia('(prefers-reduced-motion: no-preference)'),
+  screen = { width: window.innerWidth, height: window.innerHeight },
+  center = { x: screen.width / 2, y: screen.height / 2 },
+  mouse = { x: 0, y: 0 },
+  mousePercent = { x: 0, y: 0, xCenter: 0, yCenter: 0 },
+  mouseStored = Object.assign({}, mouse);
+isAnimationOk &&
+  window.addEventListener(
+    'mousemove',
+    debounce(function (e) {
+      setMouseCoords(e), animateText();
+    }, 5)
+  );
+const { ScrollObserver: ScrollObserver, valueAtPercentage: valueAtPercentage } = aat,
+  cardsContainer = document.querySelector('.cards'),
+  cards = document.querySelectorAll('.card');
+cardsContainer.style.setProperty('--cards-count', cards.length),
+  cardsContainer.style.setProperty('--card-height', `${cards[0].clientHeight}px`),
+  Array.from(cards).forEach((e, t) => {
+    if (t === cards.length - 1) return;
+    const A = 1 - 0.1 * (cards.length - 1 - t),
+      r = cards[t + 1],
+      o = e.querySelector('.card__inner');
+    ScrollObserver.Element(r, { offsetBottom: window.innerHeight - e.clientHeight }).onScroll(({ percentageY: e }) => {
+      (o.style.scale = valueAtPercentage({ from: 1, to: A, percentage: e })),
+        (o.style.filter = `brightness(${valueAtPercentage({ from: 1, to: 0.75, percentage: e })})`);
+    });
+  });
+const audioFile = './media/click.mp3',
+  audio = new Audio(audioFile),
+  audioMode = document.querySelector('.audio-mode'),
+  audioClick = document.querySelectorAll('.audio-click');
+audioMode.addEventListener('click', () => {
+  audioMode.classList.toggle('audio-off'),
+    audioMode.classList.contains('audio-off') ? (audio.volume = 0) : (audio.volume = 1);
+}),
+  audioClick.forEach((e) => {
+    (audio.currentTime = 0.25),
+      e.addEventListener('click', (e) => {
+        audio.play();
+      });
+  });
