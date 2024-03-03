@@ -1,1 +1,123 @@
-var{assign:a}=Object,d=document.querySelectorAll('.nav__item-text'),A=document.querySelectorAll('.card img'),g=document.querySelectorAll('#ticker .ticker-item'),h=0,i=document.querySelector('.hero-title'),{ScrollObserver:t,valueAtPercentage:u}=aat,v=document.querySelector('.cards'),w=document.querySelectorAll('.card');const b=document.getElementById('toggle'),c=document.getElementById('nav');b.addEventListener('click',()=>c.classList.toggle('active'));for(const B of d){B.addEventListener('click',()=>setTimeout(()=>C(),5));function C(){history.replaceState('',document.title,window.location.origin+window.location.pathname)}}document.addEventListener('scroll',()=>{let _a=window.scrollY;var _b=document.querySelector('.link-down');_a>=100?_b.classList.add('hide'):_b.classList.remove('hide')});async function f(){if(!this.createImageBitmap)return!1;return createImageBitmap(await fetch('data:image/avif;base64,AAAAIGZ0eXBhdmlmAAAAAGF2aWZtaWYxbWlhZk1BMUIAAADybWV0YQAAAAAAAAAoaGRscgAAAAAAAAAAcGljdAAAAAAAAAAAAAAAAGxpYmF2aWYAAAAADnBpdG0AAAAAAAEAAAAeaWxvYwAAAABEAAABAAEAAAABAAABGgAAAB0AAAAoaWluZgAAAAAAAQAAABppbmZlAgAAAAABAABhdjAxQ29sb3IAAAAAamlwcnAAAABLaXBjbwAAABRpc3BlAAAAAAAAAAIAAAACAAAAEHBpeGkAAAAAAwgICAAAAAxhdjFDgQ0MAAAAABNjb2xybmNseAACAAIAAYAAAAAXaXBtYQAAAAAAAAABAAEEAQKDBAAAACVtZGF0EgAKCBgANogQEAwgMg8f8D///8WfhwB8+ErK42A=').then(r=>r.blob())).then(()=>!0,()=>!1)}(async ()=>{var D=await f()?'avif':'jpg';await f()?console.log(`%cYour browser supports ${D}-image format`,'color: green;'):console.log(`%cYour browser does not support AVIF-image format`,'color: darkred;');for(const _A of A){_A.dataset.src=`${_A.dataset.src}.${D}`;_A.src=`https://recreatorus.github.io/img/${_A.dataset.src}`}})();let j=window.matchMedia('(prefers-reduced-motion: no-preference)');let k={width:window.innerWidth,height:window.innerHeight};let l={x:k.width/2,y:k.height/2};let m={x:0,y:0};let n={x:0,y:0,xCenter:0,yCenter:0};let o=a({},m);j&&window.addEventListener('mousemove',_(function(e){p(e);q()},5));function p(E){m.x=E.clientX;m.y=E.clientY}function q(){if(o.x==m.x&&o.y==m.y)return;n.x=s(m.x,k.width);n.y=s(m.y,k.height);n.xCenter=s(m.x-l.x,l.x);n.yCenter=s(m.y-l.y,l.y);i.style.setProperty('--fontWght',Math.abs(n.yCenter*(775-375))+375);i.style.setProperty('--fontYOPQ',Math.abs(n.x*(85-20))+20);i.style.setProperty('--fontYTAS',Math.abs(n.xCenter*(854-649))+649);i.style.setProperty('--fontYTLC',Math.abs(n.y*(550-470))+470);o.x=m.x;o.y=m.y}function _(aE,_B,_c){var _d;return function aF(){var aG=this,_C=arguments,_D=_c&&!_d;clearTimeout(_d);_d=setTimeout(function(){_d=null;!_c&&aE.apply(aG,_C)},_B);_D&&aE.apply(aG,_C)}}function s(aH,aI){return aH/aI}v.style.setProperty('--cards-count',w.length);v.style.setProperty('--card-height',`${w[0].clientHeight}px`);for(const[aJ,aK] of [...w].entries()){if(aJ==w.length-1)continue;var x=1-(w.length-1-aJ)*0.1,y=w[aJ+1],z=aK.querySelector('.card__inner');t.Element(y,{offsetBottom:window.innerHeight-aK.clientHeight}).onScroll(({percentageY:aL})=>{z.style.scale=u({from:1,to:x,percentage:aL});z.style.filter=`brightness(${u({from:1,to:0.75,percentage:aL})})`})}const aV='./media/click.mp3',aW=new Audio(aV),aX=document.querySelector('.audio-mode'),aY=document.querySelectorAll('.audio-click');aX.addEventListener('click',()=>{aX.classList.toggle('audio-off');aX.classList.contains('audio-off')?(aW.volume=0):(aW.volume=1)});for(const aM of aY){aW.currentTime=0.25;aM.addEventListener('click',()=>aW.play())}
+const toggle = document.getElementById('toggle'),
+  nav = document.getElementById('nav');
+toggle.addEventListener('click', () => nav.classList.toggle('active'));
+var menuLink = document.querySelectorAll('.nav__item-text');
+menuLink.forEach((e) => {
+  e.addEventListener('click', () => {
+    setTimeout(() => {
+      t();
+    }, 5);
+  });
+  function t() {
+    history.replaceState('', document.title, window.location.origin + window.location.pathname);
+  }
+}),
+  document.addEventListener('scroll', () => {
+    let e = window.scrollY,
+      t = document.querySelector('.link-down');
+    e >= 100 ? t.classList.add('hide') : t.classList.remove('hide');
+  });
+const images = document.querySelectorAll('.card img');
+async function supportsAvif() {
+  if (!this.createImageBitmap) return !1;
+  let e = await fetch(
+    'data:image/avif;base64,AAAAIGZ0eXBhdmlmAAAAAGF2aWZtaWYxbWlhZk1BMUIAAADybWV0YQAAAAAAAAAoaGRscgAAAAAAAAAAcGljdAAAAAAAAAAAAAAAAGxpYmF2aWYAAAAADnBpdG0AAAAAAAEAAAAeaWxvYwAAAABEAAABAAEAAAABAAABGgAAAB0AAAAoaWluZgAAAAAAAQAAABppbmZlAgAAAAABAABhdjAxQ29sb3IAAAAAamlwcnAAAABLaXBjbwAAABRpc3BlAAAAAAAAAAIAAAACAAAAEHBpeGkAAAAAAwgICAAAAAxhdjFDgQ0MAAAAABNjb2xybmNseAACAAIAAYAAAAAXaXBtYQAAAAAAAAABAAEEAQKDBAAAACVtZGF0EgAKCBgANogQEAwgMg8f8D///8WfhwB8+ErK42A='
+  ).then((e) => e.blob());
+  return createImageBitmap(e).then(
+    () => !0,
+    () => !1
+  );
+}
+(async () => {
+  let e = (await supportsAvif()) ? 'avif' : 'jpg';
+  (await supportsAvif())
+    ? console.log(`%cYour browser supports ${e}-image format`, 'color: green;')
+    : console.log('%cYour browser does not support AVIF-image format', 'color: darkred;'),
+    images.forEach((t) => {
+      (t.dataset.src = `${t.dataset.src}.${e}`), (t.src = `https://recreatorus.github.io/img/${t.dataset.src}`);
+    });
+})();
+var slides = document.querySelectorAll('#ticker .ticker-item'),
+  currentSlide = 0,
+  slideInterval = setInterval(nextSlide, 2500);
+function nextSlide() {
+  (slides[currentSlide].className = 'ticker-item'),
+    (currentSlide = (currentSlide + 1) % slides.length),
+    setTimeout(function () {
+      slides[currentSlide].classList.add('current');
+    }, 500);
+}
+const varText = document.querySelector('.hero-title');
+let isAnimationOk = window.matchMedia('(prefers-reduced-motion: no-preference)'),
+  screen = { width: window.innerWidth, height: window.innerHeight },
+  center = { x: screen.width / 2, y: screen.height / 2 },
+  mouse = { x: 0, y: 0 },
+  mousePercent = { x: 0, y: 0, xCenter: 0, yCenter: 0 },
+  mouseStored = Object.assign({}, mouse);
+function setMouseCoords(e) {
+  (mouse.x = e.clientX), (mouse.y = e.clientY);
+}
+function animateText() {
+  (mouseStored.x !== mouse.x || mouseStored.y !== mouse.y) &&
+    ((mousePercent.x = getPercentage(mouse.x, screen.width)),
+    (mousePercent.y = getPercentage(mouse.y, screen.height)),
+    (mousePercent.xCenter = getPercentage(mouse.x - center.x, center.x)),
+    (mousePercent.yCenter = getPercentage(mouse.y - center.y, center.y)),
+    varText.style.setProperty('--fontWght', Math.abs(400 * mousePercent.yCenter) + 375),
+    varText.style.setProperty('--fontYOPQ', Math.abs(65 * mousePercent.x) + 20),
+    varText.style.setProperty('--fontYTAS', Math.abs(205 * mousePercent.xCenter) + 649),
+    varText.style.setProperty('--fontYTLC', Math.abs(80 * mousePercent.y) + 470),
+    (mouseStored.x = mouse.x),
+    (mouseStored.y = mouse.y));
+}
+function debounce(e, t, A) {
+  var r;
+  return function o() {
+    var n = this,
+      s = arguments,
+      a = function () {
+        (r = null), A || e.apply(n, s);
+      },
+      i = A && !r;
+    clearTimeout(r), (r = setTimeout(a, t)), i && e.apply(n, s);
+  };
+}
+function getPercentage(e, t) {
+  return e / t;
+}
+isAnimationOk &&
+  window.addEventListener(
+    'mousemove',
+    debounce(function (e) {
+      setMouseCoords(e), animateText();
+    }, 5)
+  );
+const { ScrollObserver: e, valueAtPercentage: t } = aat,
+  cardsContainer = document.querySelector('.cards'),
+  cards = document.querySelectorAll('.card');
+cardsContainer.style.setProperty('--cards-count', cards.length),
+  cardsContainer.style.setProperty('--card-height', `${cards[0].clientHeight}px`),
+  Array.from(cards).forEach((A, r) => {
+    if (r === cards.length - 1) return;
+    let o = 1 - (cards.length - 1 - r) * 0.1,
+      n = cards[r + 1],
+      s = A.querySelector('.card__inner');
+    e.Element(n, { offsetBottom: window.innerHeight - A.clientHeight }).onScroll(({ percentageY: e }) => {
+      (s.style.scale = t({ from: 1, to: o, percentage: e })),
+        (s.style.filter = `brightness(${t({ from: 1, to: 0.75, percentage: e })})`);
+    });
+  });
+const audioFile = './media/click.mp3',
+  audio = new Audio('./media/click.mp3'),
+  audioMode = document.querySelector('.audio-mode'),
+  audioClick = document.querySelectorAll('.audio-click');
+audioMode.addEventListener('click', () => {
+  audioMode.classList.toggle('audio-off'),
+    audioMode.classList.contains('audio-off') ? (audio.volume = 0) : (audio.volume = 1);
+}),
+  audioClick.forEach((e) => {
+    (audio.currentTime = 0.25),
+      e.addEventListener('click', (e) => {
+        audio.play();
+      });
+  });
